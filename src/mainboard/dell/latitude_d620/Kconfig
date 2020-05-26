@@ -1,0 +1,25 @@
+if BOARD_DELL_LATITUDE_D620
+
+config BOARD_SPECIFIC_OPTIONS
+	def_bool y
+	select SYSTEM_TYPE_LAPTOP
+	select CPU_INTEL_SOCKET_M
+	select NORTHBRIDGE_INTEL_I945
+	select NORTHBRIDGE_INTEL_SUBTYPE_I945GM
+	select SOUTHBRIDGE_INTEL_I82801GX
+	select BOARD_ROMSIZE_KB_1024
+	select INTEL_INT15
+
+config MAINBOARD_DIR
+	string
+	default dell/latitude_d620
+
+config MAINBOARD_PART_NUMBER
+	string
+	default "Latitude D620"
+
+config MAX_CPUS
+	int
+	default 2
+
+endif
