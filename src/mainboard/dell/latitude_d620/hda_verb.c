@@ -1,6 +1,6 @@
 /* SPDX-License-Identifier: GPL-2.0-or-later */
 
-#include <device/azalia_devices.h>
+#include <device/azalia_device.h>
 
 const u32 cim_verb_data[] = {
 	0x83847690,	/* Codec Vendor / Device ID: SigmaTel STAC9200 */
