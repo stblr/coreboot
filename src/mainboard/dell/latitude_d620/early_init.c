@@ -33,7 +33,6 @@ void mainboard_late_rcba_config(void)
 
 	RCBA32(FD) |= FD_INTLAN;
 
-	// TODO IOTR0 (SMIC)?
-
+	RCBA64(IOTR0) = 0x000200010000fe01ULL;
 	RCBA64(IOTR3) = 0x000200f0000c0801ULL;
 }

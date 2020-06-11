@@ -234,7 +234,7 @@ static void sdram_detect_errors(struct sys_info *sysinfo)
 			printk(BIOS_DEBUG, "SLP S4# Assertion Width Violation.\n");
 			/* Write back clears bit 2 */
 			pci_write_config8(PCI_DEV(0, 0x1f, 0), GEN_PMCON_2, reg8);
-			do_reset = 1;
+			//do_reset = 1;
 
 		}
 

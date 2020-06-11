@@ -42,8 +42,8 @@ chip northbridge/intel/i945
 			register "gpi8_routing" = "1"
 			register "gpi9_routing" = "2"
 
-			register "gpe0_en" = "0x03400002"
-			register "alt_gp_smi_en" = "0x0100"
+			register "gpe0_en" = "0x00000000"
+			register "alt_gp_smi_en" = "0x0000"
 
 			# ide_enable_*, sata_mode: use default for now
 			register "sata_ports_implemented" = "1" # this needs to be tested

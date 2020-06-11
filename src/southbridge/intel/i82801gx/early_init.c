@@ -16,7 +16,9 @@ void i82801gx_lpc_setup(void)
 	const struct southbridge_intel_i82801gx_config *config;
 
 	/* Configure serial IRQs.*/
-	pci_write_config8(d31f0, SERIRQ_CNTL, 0xd0);
+	//pci_write_config8(d31f0, SERIRQ_CNTL, 0xd0);
+	//pci_write_config8(d31f0, SERIRQ_CNTL, 0x91);
+	pci_write_config8(d31f0, SERIRQ_CNTL, 0x00);
 	/*
 	 * Enable some common LPC IO ranges:
 	 * - 0x2e/0x2f, 0x4e/0x4f often SuperIO

@@ -491,6 +491,8 @@ void southbridge_smi_handler(void)
 	 */
 	smi_sts = reset_smi_status();
 
+	dump_smi_status(smi_sts);
+
 	/* Call SMI sub handler for each of the status bits */
 	for (i = 0; i < 31; i++) {
 		if (smi_sts & (1 << i)) {

@@ -51,7 +51,8 @@ static void i82801gx_enable_ioapic(struct device *dev)
 static void i82801gx_enable_serial_irqs(struct device *dev)
 {
 	/* Set packet length and toggle silent mode bit for one frame. */
-	pci_write_config8(dev, SERIRQ_CNTL, (1 << 7) | (1 << 6) | ((21 - 17) << 2) | (0 << 0));
+	//pci_write_config8(dev, SERIRQ_CNTL, (1 << 7) | (1 << 6) | ((21 - 17) << 2) | (0 << 0));
+	pci_write_config8(dev, SERIRQ_CNTL, 0x00);
 }
 
 /* PIRQ[n]_ROUT[3:0] - PIRQ Routing Control
@@ -189,7 +190,8 @@ static void i82801gx_power_options(struct device *dev)
 	}
 
 	reg8 |= (3 << 4);	/* avoid #S4 assertions */
-	reg8 &= ~(1 << 3);	/* minimum assertion is 1 to 2 RTCCLK */
+	//reg8 &= ~(1 << 3);	/* minimum assertion is 1 to 2 RTCCLK */
+	reg8 |= (1 << 3);
 
 	pci_write_config8(dev, GEN_PMCON_3, reg8);
 	printk(BIOS_INFO, "Set power %s after power failure.\n", state);
