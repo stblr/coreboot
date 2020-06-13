@@ -37,7 +37,7 @@ chip northbridge/intel/sandybridge
                                         register "ec_data_port" = "0x60"
                                         register "ec_cmd_port"  = "0x64"
                                         register "ec_ctrl_reg"  = "0xca"
-                                        register "ec_fan_ctrl_value" = "0x6b"
+                                        register "ec_fan_ctrl_value" = "0x6e"
                                         device pnp ff.1 off end
                                 end
                                 chip superio/smsc/lpc47n217
