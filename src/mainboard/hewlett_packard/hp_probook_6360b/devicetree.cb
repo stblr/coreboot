@@ -1,3 +1,5 @@
+# SPDX-License-Identifier: GPL-2.0-or-later
+
 chip northbridge/intel/sandybridge # FIXME: GPU registers may not always apply.
 	register "gfx" = "GMA_STATIC_DISPLAYS(1)"
 	register "gpu_cpu_backlight" = "0x0000014a"
