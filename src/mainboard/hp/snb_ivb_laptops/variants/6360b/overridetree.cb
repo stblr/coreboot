@@ -16,7 +16,8 @@ chip northbridge/intel/sandybridge
                         register "gen4_dec" = "0x000402e9"
 			register "gpi6_routing" = "2"
 			register "pcie_hotplug_map" = "{ 0, 1, 1, 0, 0, 0, 0, 0 }"
-			register "sata_port_map" = "0x3a"
+			# HDD(0), ODD(1)
+			register "sata_port_map" = "0x3b"
 
 			device pci 1c.0 on  end # PCIe Port #1
 			device pci 1c.1 on      # PCIe Port #2, ExpressCard
