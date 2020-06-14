@@ -10,16 +10,16 @@
 #define SERIAL_DEV PNP_DEV(0x4e, LPC47N217_SP1)
 
 const struct southbridge_usb_port mainboard_usb_ports[] = {
-	{ 1, 1, 0 },
 	{ 1, 1, 0 }, /* left front */
-	{ 1, 1, 1 }, /* left back, debug */
+	{ 1, 1, 0 }, /* left rear, debug */
 	{ 1, 1, 1 }, /* eSATA */
-	{ 1, 0, 2 }, /* webcam */
-	{ 0, 0, 2 },
+	{ 1, 1, 1 }, /* webcam */
+	{ 1, 0, 2 },
+	{ 1, 0, 2 }, /* bluetooth */
 	{ 0, 0, 3 },
 	{ 0, 0, 3 },
 	{ 1, 1, 4 }, /* fingerprint reader */
-	{ 0, 1, 4 },
+	{ 1, 1, 4 }, /* WWAN */
 	{ 1, 0, 5 }, /* right */
 	{ 1, 0, 5 },
 	{ 1, 0, 6 },
